@@ -10,14 +10,24 @@
 
 var hasMajorDiagonalConflictAt =  function(board, majorDiagonalColumnIndexAtFirstRow) {
   //Set start at top row 0 in the column with majorDiagonalColumnIndexAtFirstRow
-  
+  var location = [0, majorDiagonalColumnIndexAtFirstRow];
+  var numQueens = 0;
   //if location.column < board.length
+  if(location[1] < board.rows()) { 
     //Check if there is a queen
-      // if yes
-        //incremenet number of queens counter
-        // move to bottom right square, row++, column++
-      // else
-        // move to bottom right square, row++, column++
+    if(board.rows()[location[0]][location[1]] === 1)) {
+
+      //incremenet number of queens counter
+      numQueens++;
+      // move to bottom right square, row++, column++
+      location = [location[0]++, location[1]++];
+    } else {
+    // else
+      // move to bottom right square, row++, column++
+      location = [location[0]++, location[1]++];
+    }
+  }
 
   // return true if more than one queen, false if one or less
+  return numQueens > 1 ? true : false;
 }
