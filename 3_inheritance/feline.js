@@ -3,7 +3,7 @@ var Feline = function(name) {
 	this.paws = 4;
 	this.mammal = true;
 	this.name = name;
-}
+};
 
 /*create two subclasses, Cat and Lion, which inherit Feline's three properties
 
@@ -25,7 +25,7 @@ var Cat = function(name) {
   this.name = name;
   this.subsistence = "kibble";
   this.temperment = "snarky";
-}
+};
 
 
 Cat.prototype = Object.create(Feline.prototype);
@@ -40,14 +40,14 @@ var Lion = function(name) {
   this.name = name;
   this.subsistence = "wildlife";
   this.mane = true;
-}
+};
 
 Lion.prototype = Object.create(Feline.prototype);
 Lion.prototype.constructor = Lion;
 
 Lion.prototype.sound = function() {
   console.log('roar');
-})
+};
 
 
 
