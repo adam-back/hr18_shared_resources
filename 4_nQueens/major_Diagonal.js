@@ -9,5 +9,15 @@
 */
 
 var hasMajorDiagonalConflictAt =  function(board, majorDiagonalColumnIndexAtFirstRow) {
+  //Set start at top row 0 in the column with majorDiagonalColumnIndexAtFirstRow
+  
+  //if location.column < board.length
+    //Check if there is a queen
+      // if yes
+        //incremenet number of queens counter
+        // move to bottom right square, row++, column++
+      // else
+        // move to bottom right square, row++, column++
 
+  // return true if more than one queen, false if one or less
 }
