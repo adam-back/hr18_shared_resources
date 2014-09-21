@@ -11,7 +11,7 @@ appended to said tag.
 var data = ["blue","green","yellow"];
 
 d3.select('body').selectAll('div').data(data)
-  .enter()
+  .enter().append('div')
   .attr('background-color', function(d) {return d;})
   .exit()
   .remove()
