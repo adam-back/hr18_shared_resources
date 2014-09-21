@@ -21,9 +21,24 @@ Pseudoclassical style!
 */
 
 var Cat = function(name) {
-
+  Feline.call(this);
+  this.name = name;
+  this.subsistence = "kibble";
+  this.temperment = "snarky";
 }
+
+Cat.prototype.sound = function () {
+    console.log('meow');
+};
 
 var Lion = function(name) {
-
+  Feline.call(this);
+  this.name = name;
+  this.subsistence = "wildlife";
+  this.mane = true;
 }
+
+Lion.prototype.sound = function() {
+  console.log('roar');
+})
+
