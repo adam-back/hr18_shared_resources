@@ -27,6 +27,10 @@ var Cat = function(name) {
   this.temperment = "snarky";
 }
 
+
+Cat.prototype = Object.create(Feline.prototype);
+Cat.prototype.constructor = Cat;
+
 Cat.prototype.sound = function () {
     console.log('meow');
 };
@@ -38,7 +42,12 @@ var Lion = function(name) {
   this.mane = true;
 }
 
+Lion.prototype = Object.create(Feline.prototype);
+Lion.prototype.constructor = Lion;
+
 Lion.prototype.sound = function() {
   console.log('roar');
 })
+
+
 
